@@ -2,12 +2,22 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
-# An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
-# An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
+# Route for the index page
+GET		/							controllers.ContactsController.index
+
+# Route for creating a new contact
+POST 	/contact					controllers.ContactsController.create
+
+# Route for editing a contact
+GET		/contact/:id 				controllers.ContactsController.edit(id: Long)
+
+# Route for updating a contact
+POST	/contact/:id				controllers.ContactsController.update(id: Long)
+
+# Route for deleting a contact
+POST	/contact/:id/delete			controllers.ContactsController.delete(id: Long)
+
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

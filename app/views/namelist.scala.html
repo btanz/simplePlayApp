@@ -1,0 +1,10 @@
+@* namelist Template File *@
+@(names: List[String])
+
+@if(names.isEmpty) {
+	<h2>There are no names.</h2>
+} else {
+	<ul>
+	@names.map { name => <li>@name</li>}
+	</ul>
+}
