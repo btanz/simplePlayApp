@@ -2,4 +2,5 @@
 
 This application is written in Scala, using the Play framework.
 
+Formula $$\forall x \in R$$ 
 
